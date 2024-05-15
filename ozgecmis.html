@@ -3,90 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anasayfa</title>
+  <title>Özgeçmiş</title>
 
   <!-- icon simgeleri eklemek için -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles/styles.css">
 
 </head>
-<body>
+<body class="ozgecmis">
   
   <!--! header start  -->
   <header class="header">
-   <!-- 
-      <a href="#">
-      <img src="images/logo.png" alt="logo">
-    </a>
-    --> 
     <nav class="navbar">
-      <a href="anasayfa.html" class="active">Anasayfa</a>
-      <a href="ozgecmis.html">Özgeçmiş</a>
-      <a href="#">Şehrim</a>
-      <a href="#">Mirasımız</a>
+      <a href="anasayfa.html">Anasayfa</a>
+      <a href="ozgecmis.html" class="active">Özgeçmiş</a>
+      <a href="sehrim.html">Şehrim</a>
+      <a href="takimimiz.html">Takımımız</a>
       <a href="#">İlgi Alanlarım</a>
     </nav>
-    
-    <!--<div class="buttons">
-      <button></button>
+  </header>
+  <!--! header end -->
+
+  <!--! CV start-->
+
+  <div class="main">
+    <div class="top-section">
+      <img src="image/ef.jpg " class="profile">
+      <p class="p1">MAHMUT <span>KARAMAN</span></p>
+      <p class="p2">UI / UX Designer</span></p>
     </div>
-    -->
-    <!--! ozgecmis section start   -->  
-    <section class="ozgecmis" id="ozgecmis">
-      <div class="Ustbaslik">
-        <h1>MAHMUT KARAMAN</h1>
+    <div class="clearfix"></div>
+    
+      <div class="col-div-4">
+        <div class="content-box" style="padding-left: 40px;">
+          <p class="head">İLETİŞİM</p>
+          <p class="p3"> <i class="fa fa-phone"></i>&nbsp;&nbsp;89563000 </p> <!-- &nbsp;&nbsp; boşluk borakmak için -->
+          <p class="p3"> <i class="fa fa-envelope"></i>&nbsp;&nbsp;mahmut.karaman <br>@org.sakarya.edu.tr </p>
+          <p class="p3"> <i class="fa fa-home"></i>&nbsp;&nbsp;Serdivan/SAKARYA </p>
+          <br>
+          
+          <p class="head">BECERİ VE YETENEKLERİM</p>
+          <ul class="skills">
+            <li><span>Web Tasarımı</span></li>
+            <li><span>HTML</span></li>
+            <li><span>CSS</span></li>
+            <li><span>JavaScript</span></li>
+            <li><span>C++</span></li>
+          </ul>
+          <br>
+
+          <p class="head">DİLLER</p>
+          <p class="p3">Türkçe</p>
+          <p class="p3">İngilizce</p>          
+
+        </div>
       </div>
 
-      <div class="Hakkimda">
-        <i class="fa-solid fa-location-dot" style="padding-top: 20px;"></i><p style="font-size: 20px;">Adres</p>
-        <p>İstiklal Mahallesi, Efes Sokak, Bina No:25/A Kat:1, Daire:4, Serdivan/SAKARYA</p>
-        <h2 class="Baslik">İletişim</h2>
-        <i class="fa-solid fa-phone"></i>Telefon numarası
-        <p>0534 894 6777</p>  
-        <i class="fa-solid fa-envelope"></i>E-posta
-        <p>mahmut.karaman<br>@org.sakarya.edu.tr</p>
-        <h2 class="Baslik">Kişisel Bilgiler</h2>
-        <i class="fa-solid fa-calendar-days"></i>Doğum tarihi
-        <p>12.01.2002</p>
-        <i class="fa-solid fa-person"></i>Cinsiyet
-        <p>Erkek</p>  
-        <i class="fa-solid fa-signs-post"></i>Medeni durum
-        <p>Bekar</p>
-        <h2 class="Baslik">Diller</h2>
-        <p>İngilizce</p>B1
+        <div class="line"></div>
+      <div class="col-div-8">
+        <div class="content-box">
+          <p class="head">ÖZET</p>
+          <p class="p3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, tenetur! Commodi quisquam v
+            oluptatem beatae quo voluptate minima officia quaerat suscipit.<br> Voluptates repellendus veniam 
+            debitis doloribus rem quam reiciendis quibusdam unde.</p>
+            <br>
+            <p class="head">EĞİTİM GEÇMİŞİ</p>
+            <p class="p3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, tenetur! Commodi quisquam v
+              oluptatem beatae quo voluptate minima officia quaerat suscipit.<br> Voluptates repellendus veniam 
+              debitis doloribus rem quam reiciendis quibusdam unde.</p>
+
+        </div>
       </div>
 
-      <div class="CVBilgileri">
-        <h2 class="Baslik">ÖZET</h2>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-    
-        <h2 class="Baslik">EĞİTİM GEÇMİŞİ</h2>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-        <p>lkadşskdksa sad kada </p>
-    
-        <h2 class="Baslik">BECERİ VE YETENEKLER</h2>
-        <h3>Bilgisayar</h3>
-        <lu>
-          <li>Programlama Dilleri: Java, C++, C#, SQL</li>
-          <li>Mikroişlemcili Sistemler</li>
-          <li>Veri Yapıları</li>
-          <li>Nesne Yönelimli Analiz ve Tasarım</li>
-        </lu>
-        <h3>Yabancı Dil</h3>
-        <lu>
-          <li>Orta Düzey İngilizce</li>
-          <li>Orta Düzey Almanca</li>
-        </lu>
-      </div>
-    </section>
-    <!--! ozgecmis section start   --> 
+
+
+  </div>
+
+  <!--! CV end-->
   
-  </body>
-  </html>
+
+</body>
+</html>
