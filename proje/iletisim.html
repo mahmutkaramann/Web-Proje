@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=.6">
+    <title>İletişim</title>
+
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+<body align="center">
+    
+  <!--! header start  -->
+  <header class="header">
+     <nav class="navbar">
+       <a href="anasayfa.html">Anasayfa</a>
+       <a href="ozgecmis.html">Özgeçmiş</a>
+       <a href="sehrim.html">Şehrim</a>
+       <a href="takimimiz.html">Takımım</a>
+       <a href="ilgialanlarim.html">İlgi Alanlarım</a>
+       <a href="iletisim.html" class="active">İletişim</a>
+     </nav>
+   </header>
+   <!--! header end  -->
+
+    <form action="form.php" method="POST" id="form1" novalidate>
+
+        <h2 align="center">Başvuru-Kayıt Formu</h2>
+        <div align="center">
+            <label for="cinsiyet"> Cinsiyet </label><br>
+            <select name="Cinsiyet" required>
+
+                <option value="">Seçin</option>
+                <option name="0" id="erkek">Erkek</option>
+                <option name="1" id="kadin">Kadın</option>
+               
+            </select><br>
+        </div>
+
+        <div align="center">        
+            <label for="ad">Ad</label><br>
+            <input type="text" class="textbox" name="Ad"required><br> <!-- required özniteliği, bir form alanının doldurulmasını zorunlu kılar. -->
+        </div>
+
+        <div align="center">   
+            <label for="soyad">Soyad</label><br>
+            <input type="text" class="textbox" name="Soyad" required><br>
+        </div>
+
+        <div align="center">   
+            <label for="yas">Yaş</label><br>
+            <input type="number" class="textbox" name="Yaş" required><br><br>
+        </div>
+
+        <div align="center">  
+            <label for="email">E-Posta Adresi</label><br>
+            <input type="email" class="textbox" name="Email" placeholder="eposta@gmail.com" required><br>
+        </div>
+
+        <div align="center" > 
+            <label for="sifre">Şifre</label><br>
+            <input type="password" class="textbox" name="Şifre" placeholder="********"  required><br><br>
+        </div>
+
+        <div align="center">
+            <label for="sifre">Telefon Numarası</label><br>
+            <input type="tel" class="textbox" name="Tel" pattern="[0-9]{11}" placeholder="05555555555" required><br><br><br><br>
+        </div>
+
+
+        <div align="center">
+            <label for="bolum">Bölümünüzü Seçiniz.</label><br>
+
+            <div class="radio-container">
+                <input type="radio" name="Bölüm" value="Bilgisayar Mühendisliği" required/>Bilgisayar Mühendisliği<br>
+                <input type="radio" name="Bölüm" value="Yazılım Mühendisliği" required/>Yazılım Mühendisliği<br>
+                <input type="radio" name="Bölüm" value="Bilişim Sistemleri Mühendisliği" required/>Bilişim Sistemleri Mühendisliği<br>
+            </div><br /><br />
+        </div>
+
+        <div align="center" >
+            <label for="Bildiğiniz Programlama Dilleri">Bildiğiniz Programlama Dillerini Seçiniz.</label><br><br>
+            <div class="radio-container">
+                <input type="checkbox" name="pd1" value="c#">C#<br>
+                <input type="checkbox" name="pd2" value="c++" >C++<br>
+                <input type="checkbox" name="pd3" value="java" >Java<br>
+                <input type="checkbox" name="pd4" value="python" >Python<br>
+                <input type="checkbox" name="pd5" value="html" >HTML<br>
+                <input type="checkbox" name="pd6" value="css" >CSS<br>
+                <input type="checkbox" name="pd7" value="js">Javascript
+            </div><br /><br />
+        </div>
+
+        <div align="center">
+            <label for="dosya">Başvuranın fotoğrafı</label><br>
+        </div>
+
+        <div align="center">
+            <input type="file" name="dosya"><br /><br />
+        </div>
+        
+        <div align="center">
+            <label for="tarih">Gönderilme Tarihi</label><br>
+            <input type="date" name="Tarih" required><br>
+        </div>    
+        <br>
+        <div align="center" >
+            <label for="tarih">Gönderilme Saati</label><br>
+            <input type="time" name="Saat" required><br><br><br>
+        </div>
+
+        <div align="center" >
+            <button type="submit" name="submit" class="gonder" value="Submit">Gönder</button>
+            <button type="reset" id="temizle">Temizle</button>
+        </div>
+
+
+        <h1 id="h1"></h1>
+    </form>
+
+    <script src="./form.js">
+    
+    </script>
+
+
+
+
+    <!--Javascript ile form elemanı çalıştırma-->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+</body>
+</html>

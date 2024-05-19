@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* CSS değişkenleri */
+:root {
+  --main-color: #e84342;
+  --black-color: #121212;
+  --border: 10px solid rgba(255, 255, 255, 0.4); /* 1 rem = 16px */
+}
+
+/* tüm html etiketleri için */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: auto;
+  transition: 0.2s ease; /* geçiş süresi */
+}
+
+header a {
+  color: #eee;
+  margin-right: 40px;
+}
+
+/* carousel */
+.carousel {
+  height: 105vh;
+  margin-top: -170px;
+  width: 99vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel .list .item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0 0 0 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.carousel .list .item.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  justify-content: center;
+}
+
+.carousel .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-right: 30%;
+  box-sizing: border-box;
+  color: #fff;
+  text-shadow: 0 5px 10px #0004;
+}
+
+.carousel .list .item .author {
+  font-weight: bold;
+  letter-spacing: 10px;
+}
+
+.carousel .list .item .title {
+  font-size: 90px;
+  font-weight: bold;
+  line-height: 130px;
+  color: #f1683a;
+}
+
+.carousel .list .item .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px);
+  grid-template-rows: 40px;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.carousel .list .item .buttons button {
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-family: Poppins;
+  font-weight: 500;
+}
+
+.carousel .list .item .buttons button:nth-child(2) {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #eee;
+}
+
+/* arrows */
+.arrows {
+  position: absolute;
+  top: 80%;
+  right: 60%;
+  z-index: 100;
+  width: 300px;
+  max-width: 30%;
+  display: flex;
+  gap: 15px;
+}
+
+.arrows button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eee4;
+  border: none;
+  color: #fff;
+  font-family: monospace;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.arrows button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.aciklama {
+  font-size: 22px;
+}
+
+/* !base html codes */
+html {
+  overflow: auto; /* sayfanın yana taşmasını engeller */
+  scroll-padding-top: 90px;
+  scroll-behavior: smooth; /* kaydırma davranışı */
+}
+
+html::-webkit-scrollbar {
+  width: 9px;
+  background-color: #fff;
+}
+
+html::-webkit-scrollbar-track {
+  width: 9px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  width: 9px;
+  background-color: black;
+}
+
+body {
+  background-image: url("https://www.malatyadan.com/images/haberler/2024/05/kotu-amacli-mobil-bankacilik-yazilimlari-kuresel-capta-buyuyecek-1715072353.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* header start */
+.header {
+  background-color: #fff;
+  display: flex; /* yan yana dizer */
+  align-items: center;
+  justify-content: space-between; /* hizalamak için */
+  padding: 30px 7%;
+  margin: 20px 7%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
+  position: sticky; /* kaydırma olsa dahi ekranda görünür */
+  top: 0;
+  z-index: 1000; /* her zaman önde görünmesi için */
+}
+
+.header .navbar a {
+  margin: 0 10px;
+  font-size: 16px;
+  color: var(--black-color);
+  border-bottom: 1px solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover {
+  border-color: var(--main-color);
+  padding-bottom: 5px;
+}
+
+/* header end */
+
+/* home section start */
+.home {
+  min-height: 40vh; /* ekranın görünfüğü yer kadar alan kaplar */
+  display: flex;
+  margin-left: 5%;
+  margin-top: 3%;
+  margin-bottom: 10%;
+}
+
+.home .content {
+  max-width: 80%; /* yazının kaplayacağı alan */
+  padding-left: 10%;
+}
+
+.home .content p {
+  margin-top: 4%;
+  font-size: 19px;
+  text-transform: initial;
+  color: #fff;
+  line-height: normal; /* satır arası boşluk */
+}
+
+/* home section end */
+
+/* responsive start */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .header .navbar a {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .carousel {
+    height: 100vh;
+    margin-top: -100px;
+    width: 100vw;
+  }
+
+  .carousel .list .item .content {
+    top: 15%;
+    width: 100%;
+    padding: 0 5%;
+  }
+
+  .carousel .list .item .title {
+    font-size: 50px;
+    line-height: 70px;
+  }
+
+  .carousel .list .item .buttons {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .arrows {
+    top: 85%;
+    right: 50%;
+    width: 200px;
+    max-width: 50%;
+    gap: 10px;
+  }
+
+  .arrows button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 3% 5%;
+  }
+
+  .home .content {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .home .content p {
+    font-size: 16px;
+  }
+}
+
+/* responsive end */

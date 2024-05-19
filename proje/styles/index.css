@@ -1,0 +1,65 @@
+body {
+  background-color: white;
+  background-image: url("https://www.malatyadan.com/images/haberler/2024/05/kotu-amacli-mobil-bankacilik-yazilimlari-kuresel-capta-buyuyecek-1715072353.webp");
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-size:cover;
+  background-position:center;
+
+}
+
+#btn_login{
+  color: black;
+  display: block;
+  margin-top: 100px;
+}
+
+#div_giris{
+  color: rgb(241, 225, 225);
+  margin: 20px auto;
+  width:70%;
+  border: 1px;
+  padding: 25px;
+  border-style:solid;
+}
+
+#etiket{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: auto;
+}
+
+input{
+  width:80%;
+}
+
+#uyari{
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top:250px;
+}
+
+#basarili{
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-top:250px;
+}
+/*! responsive start */
+@media (max-width: 991px){
+  html{
+    font-size: 55%;
+  }
+  .header{
+    padding: 15px 20px;
+  }
+  section{
+    padding: 20px;
+  }
+}
+/*! responsive end */

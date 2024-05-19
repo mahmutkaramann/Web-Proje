@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* CSS değişkenleri */
+:root {
+  --main-color: #e84342;
+  --black-color: #121212;
+}
+
+/* Genel ayarlar */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: auto;
+  transition: 0.2s ease;
+}
+
+header a {
+  color: #eee;
+  margin-right: 40px;
+}
+
+/* Base HTML codes */
+html {
+  overflow: auto;
+  scroll-padding-top: 90px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("https://www.malatyadan.com/images/haberler/2024/05/kotu-amacli-mobil-bankacilik-yazilimlari-kuresel-capta-buyuyecek-1715072353.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Header */
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 7%;
+  margin: 20px 7%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .navbar a {
+  margin: 0 10px;
+  font-size: 16px;
+  color: var(--black-color);
+  border-bottom: 1px solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover {
+  border-color: var(--main-color);
+  padding-bottom: 5px;
+}
+
+/* Home section */
+.home {
+  min-height: 40vh;
+  display: flex;
+  justify-content: center;
+}
+
+.home .content {
+  max-width: 1100px;
+  padding-left: 10%;
+}
+
+.home .content h3 {
+  font-size: 60px;
+  color: #000;
+  margin-right: 20%;
+}
+
+.home .content p {
+  font-size: 19px;
+  color: #e6d7d7;
+  line-height: normal;
+}
+
+#team-info img {
+  width: 30%;
+  margin-left: 20%;
+}
+
+#team-info p {
+  color: #efeff1;
+  font-size: 18px;
+}
+
+h3 {
+  margin-left: 7%;
+}
+
+/* Responsive design */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 15px 20px;
+  }
+
+  .header .navbar a {
+    margin-right: 15px;
+    font-size: 14px;
+  }
+
+  .home {
+    flex-direction: column;
+    margin: 3% 5%;
+  }
+
+  .home .content {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .home .content h3 {
+    font-size: 50px;
+    margin-right: 0;
+  }
+
+  .home .content p {
+    font-size: 16px;
+  }
+
+  #team-info img {
+    width: 50%;
+    margin-left: 15%;
+  }
+
+  #team-info p {
+    font-size: 16px;
+  }
+}

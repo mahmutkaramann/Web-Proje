@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* CSS değişkenleri */
+:root{
+  --main-color: #e84342;
+  --black-color: #121212;
+  --border: 10px solid rgba(255, 255, 255, 0.4); /* 1 rem = 16px*/
+}
+
+/* tüm html etiketleri için */
+*{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: auto;
+  transition: 0.2s ease;  /*  geçiş süresi*/
+}
+header a{
+  color: #eee;
+  margin-right: 40px;
+}
+
+/* !base html codes*/
+html{
+  overflow: auto;   /* sayfanın yana taşmasını engeller */
+  scroll-padding-top: 90px;
+  scroll-behavior: smooth;    /* kaydırma davranışı */
+
+}
+
+body{
+ background-image: url("https://www.malatyadan.com/images/haberler/2024/05/kotu-amacli-mobil-bankacilik-yazilimlari-kuresel-capta-buyuyecek-1715072353.webp");
+ background-size: cover;
+ justify-content: center;
+}
+
+/*! header start */
+.header{
+  background-color: #fff;
+  display: flex;    /* yan yana dizer */
+  align-items: center; 
+  justify-content: space-between;   /* hizalamak için */
+  padding: 30px 7%;
+  margin: 20px 7%;
+  border-radius: 30px;
+  box-shadow: 0px 0px 17px -2px rgb(0, 0, 0, 0.75);
+  position: sticky;   /* kaydırma olsa dahi ekranda görünür */
+  top: 0;
+  z-index: 1000;  /* her zaman önde görünmesi için */
+}
+.header .navbar a{
+  margin: 0 10px;
+  font-size: 16px;
+  color: var(--black-color);
+  border-bottom: 1px solid transparent;
+}
+
+.header .navbar .active,
+.header .navbar a:hover{
+  border-color: var(--main-color);
+  padding-bottom: 5px;
+}
+/*! header end */
+
+/*! iletisim start */
+
+#form1 {
+  color:white;
+  width:50%;
+  margin: 20px auto;
+  border: 1px;
+  padding: 25px;
+  border-style:solid;
+}
+#btn_class {
+  color: black;
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+label{
+  color: #fff;
+  font-size:16px;
+  margin-top:20px;
+  margin-bottom: 10px;
+}
+.textbox{
+  color: black;
+  width:50%;
+  height:25px;
+  border-bottom:1px solid rgba(#fff, .3);
+  border-color:white;
+  background: white;
+}
+select{
+  color: rgb(74, 71, 71);
+  width:50%;
+  height:25px;
+  border-bottom:1px solid rgba(#fff, .3);
+  
+}
+.error-msg
+{
+    padding-top: 5px;
+    display: block;
+    color: red;
+}
+#temizle{
+  width: 40%;
+  height:40px;
+  border-style:none;
+  border-radius:4px;
+  color: white;
+  font-size:16px;
+  cursor: pointer; /* fare imlecinin üzerinde geldiğinde imlecin bir el simgesine dönüşmesini sağlar. */
+  background: red;
+}
+.gonder{
+  width: 40%;
+  height:40px;
+  border-style:none;
+  border-radius:4px;
+  color: white;
+  font-size:16px;
+  cursor: pointer;
+  background: rebeccapurple;
+}
+
+/*! responsive start */
+@media (max-width: 991px){
+  html{
+    font-size: 55%;
+  }
+  .header{
+    padding: 15px 20px;
+  }
+  section{
+    padding: 20px;
+  }
+}
+/*! responsive end */
